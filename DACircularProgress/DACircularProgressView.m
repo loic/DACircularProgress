@@ -45,7 +45,7 @@
     CGContextSetFillColorWithColor(context, self.trackTintColor.CGColor);
     CGMutablePathRef trackPath = CGPathCreateMutable();
     CGPathMoveToPoint(trackPath, NULL, centerPoint.x, centerPoint.y);
-    CGPathAddArc(trackPath, NULL, centerPoint.x, centerPoint.y, radius, 3.0f * M_PI_2, -M_PI_2, NO);
+    CGPathAddArc(trackPath, NULL, centerPoint.x, centerPoint.y, radius, 0, 2.0f * M_PI, NO);
     CGPathCloseSubpath(trackPath);
     CGContextAddPath(context, trackPath);
     CGContextFillPath(context);
